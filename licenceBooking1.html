@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Service NSW</title>
-        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
     </head>
     <body>
@@ -38,7 +38,7 @@
         let btnCont = document.getElementById('contBtn')
         let btnBack = document.getElementById('backBtn')
         btnBack.addEventListener('click', function () {
-            window.location.href='/licensingp1.html'
+            window.location.href='licensingp1.html'
         })
 
         btnCont.addEventListener('click', function () {
@@ -52,7 +52,7 @@
                 localStorage.setItem('Email-ID', email);
                 localStorage.setItem('Drivers-Number', dln);
                 console.log("set")
-                window.location.href='/licenceBooking2.html'
+                window.location.href='licenceBooking2.html'
             } else {
                 alert("You have not entered the correct details")
             }

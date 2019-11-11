@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Service NSW</title>
-        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
     </head>
     <body>
@@ -55,7 +55,7 @@
         let btnBack = document.getElementById('backBtn')
 
         btnBack.addEventListener('click', function () {
-            window.location.href='/licenceBooking1.html'
+            window.location.href='licenceBooking1.html'
         })
 
         btnCont.addEventListener('click', function () {
@@ -64,7 +64,7 @@
             for (i = 0; i < radioIn.length; i++) {
                 if (radioIn[i].checked) {
                     localStorage.setItem('Test-Type', radioIn[i].value);
-                    window.location.href='/licenceBooking3.html'
+                    window.location.href='licenceBooking3.html'
                 }
             }
             }
