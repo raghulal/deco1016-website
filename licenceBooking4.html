@@ -59,19 +59,27 @@
                     <li><p>
                         I will bring the prescribed fee for the licence for when I pass the test.
                     </p></li>
-                </ul>
-                <button type="button">Continue</button><br><br>
+                </ul><br>
+                <button type="button" id="backBtn">Back</button>
+                <button type="button" id="contBtn">I agree to these terms and conditions</button><br><br>
             </form>
         </div>
     </section>
 </body>
 
 <script>
-    let form = document.getElementById("mainForm")
-
-    form.addEventListener("button", function () {
-        event.preventDefault();
+    let form = document.getElementById('mainForm')
+    let btnCont = document.getElementById('contBtn')
+    let btnBack = document.getElementById('backBtn')
+        
+    btnBack.addEventListener('click', function () {
+        window.location.href='/licenceBooking3.html'
     })
+    
+    btnCont.addEventListener('click', function () {
+        window.location.href='/licenceBooking5.html'
+        }
+    )
 </script>
 
 </html>

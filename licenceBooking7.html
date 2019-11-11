@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Service NSW</title>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
-</head>
-<body>
-    <header>
-        <a href="#">
-            <h2 id="licenceTitle">Book a Driving Test</h2>
-        </a>
-    </header>
-    <section class="lander">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Service NSW</title>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <h2 id="licenceTitle">Book a Driving Test</h2>
+            </a>
+        </header>
+        <section class="lander">
+            
+        </section>
+        <br>
+        <section>
+            <div class="main-card">
+                <h3 id="licenceHeading">What time do you want to sit your test?</h3>
+                <form id="mainForm">
+                    <input type="time" step="60" id="timeInput"><br><br>
+                    <p><i>Test times are only available in half hour increments, from 9:00AM.</i></p>
+                    <button type="button" id="contBtn">Continue</button><br>
+                    <button type="button" id="backBtn">Back</button><br>
+                </form>
+            </div>
+        </section>
+    </body>
+
+    <script>
+        let form = document.getElementById('mainForm')
+        let btnCont = document.getElementById('contBtn')
+        let btnBack = document.getElementById('backBtn')
         
-    </section>
-    <br>
-    <section>
-        <div class="main-card">
-            <h3 id="licenceHeading">Which test do you want to do?</h3>
-            <form id="mainForm">
-                <div class="radioLicence">
-                    <input type="radio" name="testName" value="DKT">
-                    <label for="DKT" class="radioCont">(DKT) Driver's Knowledge Test</label>
-                </div><br>
-                <div class="radioLicence">
-                    <input type="radio" name="testName" value="HeavyVehicle" placeholder="HPT">
-                    <label for="HPT">(HPT) Hazard Perception Test</label>
-                </div><br>
-                <div class="radioLicence">
-                    <input type="radio" name="testName" value="DT">
-                    <label for="DT">(DT) Driving Test</label>
-                </div><br>
-                <div class="radioLicence">
-                    <input type="radio" name="testName" value="DQT">
-                    <label for="DQT">(DQT) Driver's Qualification Test</label>
-                </div><br>
-                <button type="button">Continue</button><br>
-            </form>
-        </div>
-    </section>
-</body>
+        btnBack.addEventListener('click', function () {
+            window.location.href='/licenceBooking6.html'
+        })
 
-<script>
-    let form = document.getElementById("mainForm")
-
-    form.addEventListener("button", function () {
-        event.preventDefault();
-    })
-</script>
-
+        btnCont.addEventListener('click', function () {
+            let timeIn = document.getElementById('timeInput');
+            localStorage.setItem('Test-Time', timeIn.value);
+            window.location.href='/licenceBooking8.html'
+            }
+        )
+    </script>
 </html>

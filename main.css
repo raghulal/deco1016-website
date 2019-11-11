@@ -140,7 +140,7 @@ header > img {
     width: 200px;
 }
 
-.main-card input[type=text] {
+.main-card input[type=text], .main-card input[type=number] {
     margin: 1em 0 1em 0;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -150,15 +150,26 @@ header > img {
     width: 50%;
     font-weight: 300;
     font-style: italic;
-    transition: font, 0.2s;
-    transition-timing-function: ease-in-out;
     border: 0px;
+    transition: font, 0.2s;
 }
 
-.main-card input[type=text]:focus {
+.main-card input[type=text]:focus, .main-card input[type=number]:focus {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-style: normal;
+}
+
+.finalCheck {
+    margin: 1em 0 1em 0;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    padding: 0.5em;
+    border-color: #aaaaaa;
+    width: 50%;
+    font-weight: 600;
+    background: #eeeeee;
 }
 
 .main-card .radioLicence {
@@ -175,7 +186,7 @@ header > img {
     display: inline-block; 
 }
 
-.main-card button {
+.main-card button{
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     color: #ffffff;
@@ -184,7 +195,26 @@ header > img {
     background: #e3173c;
     border: 0px;
     border-radius: 10px;
+    transition: background, 0.2s;
+}
+
+.main-card #contBtn {
     float:right;
+}
+
+.main-card #backBtn {
+    float: left;
+}
+
+.main-card button:hover {
+    background: #ff3358;
+    cursor: pointer;
+}
+
+.main-card button:active {
+    background: #ffcdcd;
+    cursor:pointer;
+    color: #404040;
 }
 
 .tncs {
@@ -203,7 +233,20 @@ header > img {
     padding: 0.7em;
     border: 0px;
     border-radius: 10px;
-    
+}
+
+#dateInput {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em;
+    border: 0px;
+    border-radius: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin:0;
 }
 
 @media only screen and (max-width: 960px) {

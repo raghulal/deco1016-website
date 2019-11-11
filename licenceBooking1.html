@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Service NSW</title>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
-</head>
-<body>
-    <header>
-        <a href="#">
-            <h2 id="licenceTitle">Book a Driving Test</h2>
-        </a>
-    </header>
-    <section class="lander">
-        
-    </section>
-    <br>
-    <section>
-        <div class="main-card">
-            <h3 id="licenceHeading">Let's start with some basic details.</h3>
-            <form id="mainForm">
-                <input type="text" name="firstName" id="firstName" placeholder="First name">
-                <input type="text" name="lastName" id="lastName" placeholder="Last name">
-                <input type="text" name="email" id="email" placeholder="Email">
-                <input type="text" name="DLN" id="DLN" placeholder="Driver's Licence Number / Photo ID Number"><br>
-                <button type="button">Continue</button><br>
-            </form>
-        </div>
-    </section>
-</body>
-<script>
-    let form = document.getElementById("mainForm")
-    form.addEventListener("button", store())
-
-        function store() {
-            var fname = document.getElementById("firstName");
-            var lname = document.getElementById("lastName");
-            var email = document.getElementById("email");
-            var dln = document.getElementById("DLN");
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Service NSW</title>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <h2 id="licenceTitle">Book a Driving Test</h2>
+            </a>
+        </header>
+        <section class="lander">
             
-            localStorage.setItem("First-Name", fname.value);
-            localStorage.setItem("Last-Name", lname.value);
-            localStorage.setItem("Email-ID", email.value);
-            localStorage.setItem("Drivers-Number", dln.value);
-            fill();
-        }
+        </section>
+        <br>
+        <section>
+            <div class="main-card">
+                <h3 id="licenceHeading">Let's start with some basic details.</h3>
+                <form id="mainForm">
+                    <input type="text" name="firstName" id="firstName" placeholder="First name">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last name">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="number" name="DLN" id="DLN" placeholder="Driver's Licence Number / Photo ID Number"><br><br>
+                    <button type="button" id="backBtn">Back</button>
+                    <button type="button" id="contBtn">Continue</button><br>
+                </form>
+            </div>
+        </section>
+    </body>
+    <script>
+        let form = document.getElementById('mainForm')
+        let btnCont = document.getElementById('contBtn')
+        let btnBack = document.getElementById('backBtn')
+        btnBack.addEventListener('click', function () {
+            window.location.href='/licensingp1.html'
+        })
 
-        function fill() {
-            var storedfName = localStorage.getItem("First-Name");
-            var storedlName = localStorage.getItem("Last-Name");
-
-        }
-</script>
-
+        btnCont.addEventListener('click', function () {
+            let fname = document.getElementById('firstName').value;
+            let lname = document.getElementById('lastName').value;
+            let email = document.getElementById('email').value;
+            let dln = document.getElementById('DLN').value;
+            if (fname != "" && lname != "" && email != "" && dln != "") {
+                localStorage.setItem('First-Name', fname);
+                localStorage.setItem('Last-Name', lname);
+                localStorage.setItem('Email-ID', email);
+                localStorage.setItem('Drivers-Number', dln);
+                console.log("set")
+                window.location.href='/licenceBooking2.html'
+            } else {
+                alert("You have not entered the correct details")
+            }
+            }
+        )
+    </script>
 </html>
