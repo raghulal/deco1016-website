@@ -195,6 +195,17 @@ header > img {
     padding: 0.5em;
 }
 
+.main-card input[type=time] {
+    width:50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em;
+    border: 0px;
+    border-radius: 10px;
+    
+}
+
 @media only screen and (max-width: 960px) {
     .lander img {
         object-fit: cover;

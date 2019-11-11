@@ -21,7 +21,7 @@
     <section>
         <div class="main-card">
             <h3 id="licenceHeading">Let's start with some basic details.</h3>
-            <form>
+            <form id="mainForm">
                 <input type="text" name="firstName" id="firstName" placeholder="First name">
                 <input type="text" name="lastName" id="lastName" placeholder="Last name">
                 <input type="text" name="email" id="email" placeholder="Email">
@@ -31,4 +31,28 @@
         </div>
     </section>
 </body>
+<script>
+    let form = document.getElementById("mainForm")
+    form.addEventListener("button", store())
+
+        function store() {
+            var fname = document.getElementById("firstName");
+            var lname = document.getElementById("lastName");
+            var email = document.getElementById("email");
+            var dln = document.getElementById("DLN");
+            
+            localStorage.setItem("First-Name", fname.value);
+            localStorage.setItem("Last-Name", lname.value);
+            localStorage.setItem("Email-ID", email.value);
+            localStorage.setItem("Drivers-Number", dln.value);
+            fill();
+        }
+
+        function fill() {
+            var storedfName = localStorage.getItem("First-Name");
+            var storedlName = localStorage.getItem("Last-Name");
+
+        }
+</script>
+
 </html>
