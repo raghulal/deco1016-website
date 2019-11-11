@@ -38,9 +38,14 @@
     <script>
         let form = document.getElementById('mainForm')
         let btnBack = document.getElementById('backBtn')
+        let btnCont = document.getElementById('contBtn')
         
         btnBack.addEventListener('click', function () {
             window.location.href='/licenceBooking7.html'
+        })
+
+        btnCont.addEventListener('click', function () {
+            window.location.href='/licenceBooking9.html'
         })
 
         document.getElementById('FfName').innerHTML = "First Name: " + localStorage.getItem('First-Name');

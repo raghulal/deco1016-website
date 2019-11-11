@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Service NSW</title>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Montserrat+Subrayada|Rubik&display=swap">
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <h2 id="licenceTitle">Book a Driving Test</h2>
+            </a>
+        </header>
+        <section class="lander">
+            
+        </section>
+        <br>
+        <section>
+            <div class="main-card">
+                <h3 id="licenceHeading">Just some final checks...</h3>
+                    <p>
+                        Thank you for filling out the form. You will recieve an email soon, confirming the details.
+                    </p>
+                    <button type="button" id="contBtn">Home</button><br><br>
+            </div>
+        </section>
+    </body>
+
+    <script>
+        let form = document.getElementById('mainForm')
+        let btnCont = document.getElementById('contBtn')
+        
+        btnCont.addEventListener('click', function () {
+            window.location.href='/index.html'
+        })
+    </script>
+</html>

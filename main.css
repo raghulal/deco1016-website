@@ -13,7 +13,7 @@ h1 {
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
-    color: red;
+    color: #e3173c;
 }
 
 p {
@@ -64,6 +64,20 @@ h3 {
     vertical-align: middle;
 }
 
+.flex-title p {
+    text-align: center;
+    padding: 0.2em;
+    color: grey;
+}
+
+#flexLicence {
+    background: #ff3358;
+}
+
+#flexLicence:hover {
+    background: #e3173c;
+}
+
 .main-card {
     border-radius: 25px;
     background-color: pink;
@@ -75,6 +89,17 @@ h3 {
 .lander img {
     object-fit: cover;
     width: 100%;
+}
+
+.lander .floatingWelcome {
+    position: relative;
+    top: -300px;
+    left: 300px;
+    float: left;
+}
+
+.lander .floatingWelcome h3 {
+    font-weight: 100;
 }
 
 #headerTitle {
@@ -247,6 +272,13 @@ header > img {
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin:0;
+}
+
+footer {
+    background: #e3173c;
+    padding: 2em;
+    text-align: center;
+    color: white;
 }
 
 @media only screen and (max-width: 960px) {
